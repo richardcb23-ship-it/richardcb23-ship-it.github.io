@@ -172,12 +172,15 @@
           <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-cad-sativa.png" alt="CAD" style="object-fit:contain;background:#111"><div class="slide-label">CAD design — Socket + blade over 3D-scanned anatomy</div></div>
           <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-sativa-side.jpg" alt="Sativa" style="object-fit:cover"><div class="slide-label">Sativa — Red socket prosthetic, articulated blade</div></div>
           <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-jack-prosthetic.jpg" alt="Jack" style="object-fit:cover"><div class="slide-label">Jack — First patient, blue TPU prosthetic</div></div>
-          <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-socket-detail.png" alt="Socket" style="object-fit:contain;background:#111"><div class="slide-label">Ventilated socket — Anatomical contour & harness mounts</div></div>
+          <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-socket-detail.png" alt="Socket" style="object-fit:contain;background:#111"><div class="slide-label">Ventilated socket design detail</div></div>
+          <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-socket-texture.png" alt="Texture" style="object-fit:contain;background:#111"><div class="slide-label">Engraved texture pattern on socket</div></div>
+          <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-blender-wireframe.png" alt="Wireframe" style="object-fit:contain;background:#111"><div class="slide-label">Blender wireframe for biomechanical analysis</div></div>
+          <div class="gallery-slide" style="height:420px"><img src="images/dogmotion-scale-model.jpg" alt="Scale" style="object-fit:cover"><div class="slide-label">3D-printed scale model for fit verification</div></div>
         </div><button class="gallery-nav gallery-prev" onclick="moveSlide('dogmotion',-1)">‹</button><button class="gallery-nav gallery-next" onclick="moveSlide('dogmotion',1)">›</button><div class="gallery-dots" id="dogmotion-dots"></div></div>
         <div class="project-body">
           <div class="project-type">Startup · Prosthetics · 3D Printing</div>
           <h3 class="project-title">DogMotion Studio — 3D-Printed Canine Prosthetics</h3>
-          <p class="project-desc">Co-founded Perú's first personalized canine prosthetics startup. Full scan-to-print pipeline: 3D scanning, CAD modeling (Fusion 360, Blender), FDM/SLA printing with ABS, PETG, TPU, and prosthetic silicone liners. Reduced fabrication from 5 months to 1 week. Cost: S/500–700 vs. US$2,500+ imported.</p>
+          <p class="project-desc">Co-founded and lead prosthetic designer at Perú's first personalized canine prosthetics startup. Full scan-to-print pipeline: 3D scanning, CAD modeling (Fusion 360, Blender), FDM/SLA printing with ABS, PETG, TPU, and prosthetic silicone liners. Reduced fabrication from 5 months to 1 week. Cost: S/500–700 vs. US$2,500+ imported.</p>
           <div class="project-tags"><span class="tag">Fusion 360</span><span class="tag">Blender</span><span class="tag">3D Scanning</span><span class="tag">FDM / SLA</span><span class="tag">TPU / PETG</span><span class="tag">Biomechanics</span></div>
           <div class="project-metrics"><div class="metric"><strong>3</strong> patients</div><div class="metric"><strong>20x</strong> cheaper</div><div class="metric"><strong>8+</strong> media features</div></div>
         </div>
@@ -286,7 +289,7 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <h2 class="section-title">Let's Work Together</h2>
+      <h2 class="section-title">Let's work together</h2>
       <p>Open for remote freelance projects in medical 3D modeling, microfluidic device design, CFD/FEA simulation, and prosthetic development.</p>
       <div class="deliverables">
         <span class="deliverable-tag">Microfluidic device CAD files</span>
@@ -355,7 +358,7 @@
     function updateGallery(id){const g=galleries[id];document.getElementById(id+'-track').style.transform=`translateX(-${g.current*100}%)`;document.querySelectorAll('#'+id+'-dots .gallery-dot').forEach((d,i)=>{d.className='gallery-dot'+(i===g.current?' active':'')})}
 
     const projectInfo={
-      dogmotion:{type:'Startup · Prosthetics · 3D Printing',title:'DogMotion Studio — 3D-Printed Canine Prosthetics',desc:"Co-founded Perú's first personalized canine prosthetics startup. Full scan-to-print pipeline: 3D scanning, CAD modeling (Fusion 360, Blender), FDM/SLA printing with ABS, PETG, TPU, and prosthetic silicone liners. Reduced fabrication from 5 months to 1 week.",tags:['Fusion 360','Blender','3D Scanning','FDM / SLA','TPU / PETG','Biomechanics'],metrics:['3 patients treated','20x cheaper than imports','8+ media features']},
+      dogmotion:{type:'Startup · Prosthetics · 3D Printing',title:'DogMotion Studio — 3D-Printed Canine Prosthetics',desc:"Co-founded and lead prosthetic designer at Perú's first personalized canine prosthetics startup. Full scan-to-print pipeline: 3D scanning, CAD modeling (Fusion 360, Blender), FDM/SLA printing with ABS, PETG, TPU, and prosthetic silicone liners. Reduced fabrication from 5 months to 1 week.",tags:['Fusion 360','Blender','3D Scanning','FDM / SLA','TPU / PETG','Biomechanics'],metrics:['3 patients treated','20x cheaper than imports','8+ media features']},
       rbc:{type:'Microfluidics · Lab-on-a-Chip',title:'RBC Separation & Microencapsulation',desc:'Two integrated PDMS microfluidic devices. ErythroSep: inertial separation using serpentine CE channels. ErythroEncap: passive micromixer, flow-focusing droplet generator, on-chip CaCl₂ crosslinking.',tags:['PDMS Soft Lithography','COMSOL CFD','Droplet Generation','Fluorescence Microscopy'],metrics:['2 integrated chips','2% HTC input','~50 µm droplets']},
       spiral:{type:'CFD Simulation · Inertial Microfluidics',title:'Inertial Particle Separation in Spiral Microchannels',desc:'Spiral microfluidic device for size-based inertial separation (2, 7, 10 µm). COMSOL laminar flow + particle tracing, Dean flow focusing across CE regions. Parametric sweeps on Q and channel width.',tags:['COMSOL CFD','Particle Tracing','Dean Flow','SLA Printing','Python / R'],metrics:['Re 68.9 · De 7.4','3 particle populations','7 CE sections analyzed']},
       anatomy:{type:'Medical Imaging · 3D Modeling',title:'Patient-Specific Anatomical Models',desc:'CT/MRI-based anatomical models for surgical planning and education. Lumbar spine (L1–L4) with kidneys; modular lung with magnet snap-fit assembly. Segmented in 3D Slicer, refined in Meshmixer.',tags:['3D Slicer','Meshmixer','Blender','FDM Printing','CT Segmentation'],metrics:['2 anatomical systems','DICOM → STL → Print']},
